@@ -1,0 +1,21 @@
+.header-container {
+    
+    .header-content {
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $white;
+        box-shadow: 1px 0px 5px 0px $headerShadow;
+
+        .username-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            > img {
+                width: 20px;
+            }
+        }
+    }
+}

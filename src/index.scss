@@ -1,5 +1,6 @@
 @import './stylesheets/colors.scss';
 @import './stylesheets/header.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 body {
   margin: 0;
@@ -8,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
 }
 
 code {

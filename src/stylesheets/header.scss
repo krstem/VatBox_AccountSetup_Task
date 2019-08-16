@@ -7,15 +7,48 @@
         align-items: center;
         background-color: $white;
         box-shadow: 1px 0px 5px 0px $headerShadow;
+        color: $grey;
+        font-size: 13px;
 
-        .username-icon {
-            display: inline-flex;
-            justify-content: center;
+        .header-item-container {
+            display: flex;
             align-items: center;
 
-            > img {
-                width: 20px;
+            &:first-child {
+                border-right: 1px solid $grey;
+                padding: 0 10px;
             }
+
+            &:nth-child(2) {
+                padding: 0 10px;
+
+                > img {
+                    width: 10px;
+                    opacity: 0.5;
+                    padding: 0 5px;
+                    margin-top: 3px;
+                }
+            }
+
+            .username-icon {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+    
+                > img {
+                    width: 20px;
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        .company_name {
+            border-left: 1px solid $grey;
+            font-size: 15px;
+            padding: 0 10px;
+            height: 35px;
+            display: flex;
+            align-items: center;
         }
     }
 }

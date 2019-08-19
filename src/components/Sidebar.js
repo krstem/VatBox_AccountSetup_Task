@@ -2,8 +2,8 @@ import React from 'react';
 import Icon from './Icon';
 
 const CLASS_NAMES = {
-  SIDEBAR_WRAPPER: 'sidebar-wrapper',
-  SIDEBAR_MENU: 'sidebar-menu',
+  SIDEBAR_WRAPPER: 'nav-side-menu',
+  SIDEBAR_MENU: 'menu-list',
   SIDEBAR_MENU_ITEM: 'sidebar-menu-item',
   SIDEBAR_ACTIVE_MENU_ITEM: 'sidebar-active-menu-item'
 };
@@ -15,7 +15,7 @@ const CLASS_NAMES = {
     { name: 'Vendor Direct'}
   ];
    const TAXTailor = [
-    { icon:'', name: 'NMI' }, { icon:'', name: 'AP Audit' }, {icon:'', name: 'T&E Spend Analysis'}
+    { icon:'molecule.svg', name: 'NMI' }, { icon:'checklist.svg', name: 'AP Audit' }, {icon:'line-chart.svg', name: 'T&E Spend Analysis'}
   ]
     
   
@@ -26,54 +26,65 @@ class Sidebar extends React.Component {
       super();
 
     };
-    handleSidebar() {
-      this.setState({
-        sideBar: !this.state.sideBar
-      });
-    }
+
     render() { 
       return(
-        <div class="nav-side-menu">
-            <div class="brand">Brand Logo</div>
-            <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class={CLASS_NAMES.SIDEBAR_WRAPPER}>
+            <div class="brand">
+              <Icon icon='logo.png'/>
+            </div>
           
-                <div class="menu-list">
-          
-                    <ul id="menu-content" class="menu-content collapse out">
+                <div class={CLASS_NAMES.SIDEBAR_MENU}>
+                    <ul>
                         <li>
-                          <a href="#">
-                          <i class="fa fa-dashboard fa-lg"></i> VAT Recovery
+                          <a href="#" className="icon-size">
+                          <Icon icon='menu.svg' /> VAT Recovery
                           </a>
                         </li>
-                        <ul class="sub-menu collapse">
+                        <ul class="sub-menu collapse isDisabled">
                           {VatRecovery.map(item => {
-                            return <li>{item.name}</li>;
+                            return <li className='no-icon-list'>{item.name}</li>;
                           })}
                         </ul>
 
-                        <li  data-toggle="collapse" data-target="#products" class="collapsed active">
-                          <a href="#"><i class="fa fa-gift fa-lg"></i>  Evidance Qualification  <span class="arrow"></span></a>
+                        <li>
+                          <a href="#" className='icon-size'> <Icon icon='bill.svg' />Evidance Qualification</a>
                         </li>
-                        <ul class="sub-menu collapse">
+                        <ul class="isDisabled">
                           {EvidanceQualification.map(item => {
-                            return <li>{item.name}</li>;
+                            return <li className='no-icon-list'>{item.name}</li>;
                           })}
                         </ul>
 
-                        <li data-toggle="collapse" data-target="#service" class="collapsed">
-                          <a href="#"><i class="fa fa-globe fa-lg"></i> TAX Tailor <span class="arrow"></span></a>
+                        <li>
+                          <a href="#" className='icon-size'> <Icon icon='ruler.svg' />TAX Tailor</a>
                         </li> 
-                        <ul class="sub-menu collapse">
+                        <ul class="isDisabled">
                           {TAXTailor.map(item => {
-                            return <li>{item.name}</li>;
+                            return <li>
+                                      <span className='icon-size'>
+                                        <Icon icon={item.icon} />
+                                      </span>
+                                      {item.name}
+                                    </li>
                           })}
                         </ul> 
 
-                        <li data-toggle="collapse" data-target="#new" class="collapsed">
-                          <a href="#"><i class="fa fa-car fa-lg"></i> Account Setup <span class="arrow"></span></a>
+                        <li>
+                          <div className="account-setup">
+                            <a href="#" className='icon-size'><Icon icon='rectangle.svg'/>Account Setup</a>
+                          </div>
                         </li>
                     </ul>
             </div>
+            <button className='support-button'>
+                <span className='icon-size'>
+                  {/* <Icon icon='support.svg'/> */}
+                </span>
+                <span className="button-name">
+                    VATBox Support
+                </span>
+            </button>
         </div>
       );
     }

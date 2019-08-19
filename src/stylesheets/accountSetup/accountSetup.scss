@@ -38,7 +38,7 @@
             }
 
             .leaders-card-title {
-                height: 55px;
+                height: 40px;
             }
 
             .headquarters,
@@ -56,6 +56,7 @@
 
                 .data {
                     font-weight: 500;
+                    display: flex;
                 }
 
                 .legend {
@@ -68,8 +69,14 @@
                 }
             }
 
+            .headquarters {
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
             .leaders {
-                height: 55px;
+                height: 50px;
                 text-align: initial;
 
                 &:last-child {
@@ -95,11 +102,13 @@
                 display: flex;
                 justify-content: flex-start;
                 align-content: inherit;
+                cursor: pointer;
 
                 .add-contact {
                     > img {
                         width: 24px;
                         padding-right: 10px;
+                        cursor: pointer;
                     }
                 }
             }

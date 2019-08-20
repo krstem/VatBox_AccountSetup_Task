@@ -22,7 +22,16 @@ const Modal = (props) => {
     }
 
     const handleSave = () => {
-        dispatch({ type: props.actionType, payload: editedLeader });
+        const dispatchObj = {
+            type: props.actionType,
+            payload: editedLeader
+        }
+        if (props.type === 'leaders') {
+            dispatchObj.payload['type'] = 'leaders';
+        } else {
+            dispatchObj.payload['type'] = 'contacts';
+        }
+        dispatch(dispatchObj);
         props.onClose();
     }
 

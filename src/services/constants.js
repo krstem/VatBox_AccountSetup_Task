@@ -8,11 +8,21 @@ export const CONSTANTS = {
     DELETE: 'DELETE'
 }
 
-export const initialState = [
-    {
-        id: 1,
-        name: 'Ines Milanova',
-        phoneNumber: '123456678',
-        email: 'ines@milanova.com'
-    }
-]
+export const initialState = {
+    leaders: [
+        {
+            id: 1,
+            name: 'Julia Libder',
+            phoneNumber: '+46-591-409173',
+            email: 'julia.libder@amco.com'
+        }
+    ],
+    contacts: [
+        {
+            id: 1,
+            name: 'Maria Armstrong',
+            phoneNumber: '+46-591-409173',
+            email: 'maria@armstrong.com'
+        }
+    ]
+}

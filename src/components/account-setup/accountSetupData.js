@@ -33,6 +33,7 @@ const AccountSetupData = (props) => {
                 {modal && <Modal show={modal}
                     onClose={() => toggleModal(!modal)}
                     leader={props.leader}
+                    type={props.type}
                     actionType='EDIT'
                 />}
             </div>

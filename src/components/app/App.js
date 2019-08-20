@@ -6,6 +6,7 @@ import accountSetupReducer from '../../services/accountSetupReducer';
 
 import Header from '../Header';
 import AccountSetup from '../account-setup/AccountSetup';
+import ProgressBarContainer from '../progressBar/progressBarContainer';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
       <LeadersContext.Provider value={{ data, dispatch }}>
         <Header />
         <AccountSetup />
+        <ProgressBarContainer />
       </LeadersContext.Provider>
     </div>
   );

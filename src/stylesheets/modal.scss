@@ -1,0 +1,49 @@
+.backdrop-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $modalBackgroundShadow;
+    padding: 50px;
+
+    .modal-container {
+        background-color: $white;
+        border-radius: 5px;
+        max-width: fit-content;
+        max-height: 300px;
+        margin: 0 auto;
+        padding: 30px;
+
+        > input {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+            width: 200px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid $grey;
+            outline: none;
+        }
+
+        .modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .actions {
+                width: 100px;
+                height: 30px;
+                background-color: transparent;
+                border: 1px solid $actionBlue;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $actionBlue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

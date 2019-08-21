@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+
+  .content-wrapper {
+    display: flex;
+
+    .right-section {
+      padding-left: 250px;
+      overflow-x: auto;
+    }
+  }
+}

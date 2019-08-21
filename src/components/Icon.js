@@ -14,7 +14,7 @@ export default class Icon extends Component {
 
         const isImageType = (/\.(svg|jpg|png)$/i).test(icon);
         return (isImageType &&
-            <img className={classNames} src={this.getImagePath(icon)}></img>
+            <img className={classNames} src={this.getImagePath(icon)} alt={'icon'}></img>
         )
     };
 }

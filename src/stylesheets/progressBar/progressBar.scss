@@ -20,6 +20,10 @@
             display: flex;
             opacity: 0.7;
             padding-left: 15px;
+
+            @media (max-width: 1800px) {
+                font-size: 13px;
+            }
         }
     
         .missing-progress-data {

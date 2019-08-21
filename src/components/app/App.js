@@ -11,11 +11,13 @@ import ProgressBarContainer from '../progressBar/progressBarContainer';
 const App = () => {
 
   const [data, dispatch] = useReducer(accountSetupReducer, initialState);
+  import Sidebar from '../Sidebar';
 
   return (
     <div className="App">
       <LeadersContext.Provider value={{ data, dispatch }}>
         <Header />
+        <Sidebar />
         <AccountSetup />
         <ProgressBarContainer />
       </LeadersContext.Provider>

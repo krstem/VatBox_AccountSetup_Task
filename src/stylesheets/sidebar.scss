@@ -15,7 +15,7 @@
     position: relative;
     top: 90px;
     left: 50px;
-    height: 30px;
+    height: 40px;
     background-color: $sidebarBackgroundColor;
     border: 1px solid $sidebarBorderColor;
     border-radius: 4px;
@@ -59,7 +59,6 @@
   line-height: 2.53;
   text-align: left;
   color: $white;
-  padding-bottom: 5px;
 
   .sidebar-icon-size {
     img {
@@ -91,10 +90,7 @@
 .nav-side-menu li  {
   border: none;
   line-height: 28px;
-  border-bottom: 1px solid $sidebarBorderColor;
   margin-left: 0px;
-  padding-bottom: 10px;
-  padding-top: 8px;
 }
 
 .sidebar-disabled-item {
@@ -111,6 +107,8 @@
 .nav-side-menu li {
   padding-left: 10px;
   border-bottom: 1px solid $sidebarBorderColor;
+  padding-bottom: 10px;
+  padding-top: 10px;
   
 }
 .nav-side-menu li a {
@@ -126,10 +124,10 @@
   }
 
   .sidebar-menu-logo {
-    text-align: left !important;
+    text-align: left;
     font-size: 22px;
     padding-left: 20px;
-    line-height: 50px !important;
+    line-height: 50px;
   }
 }
 @media (min-width: 767px) {

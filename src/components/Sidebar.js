@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon';
+import {vatRecovery, evidenceQualification, taxTailor} from '../components/dataConstants';
 import cx from 'classnames';
 
 const CLASS_NAMES = {
@@ -15,16 +16,6 @@ const CLASS_NAMES = {
   SIDEBAR_NO_ICON_IN_LIST: 'no-icon-in-list'
 };
 
-  const VatRecovery = [
-    { name: 'Your Reclaims' }, { name: 'Your Invoices' }, { name: 'Optimize Recovery' }
-  ];
-  const EvidanceQualification = [
-    { name: 'Vendor Direct'}
-  ];
-   const TAXTailor = [
-    { icon:'molecule.svg', name: 'NMI' }, { icon:'checklist.svg', name: 'AP Audit' }, {icon:'line-chart.svg', name: 'T&E Spend Analysis'}
-  ]
-    
   
 class Sidebar extends React.Component {
     constructor() {
@@ -47,7 +38,7 @@ class Sidebar extends React.Component {
                           </a>
                         </li>
                         <ul>
-                          {VatRecovery.map(item => {
+                          {vatRecovery.map(item => {
                             return <li className={CLASS_NAMES.SIDEBAR_NO_ICON_IN_LIST}>
                                       <a href="#" className={CLASS_NAMES.SIDEBAR_DISABLED_MENU_ITEM}>{item.name}</a>
                                    </li>;
@@ -57,11 +48,11 @@ class Sidebar extends React.Component {
                         <li>
                           <a href="#" className={CLASS_NAMES.SIDEBAR_ICON_SIZE}> 
                             <Icon icon='bill.svg' />
-                            Evidance Qualification
+                            Evidence Qualification
                           </a>
                         </li>
                         <ul>
-                          {EvidanceQualification.map(item => {
+                          {evidenceQualification.map(item => {
                             return <li className={CLASS_NAMES.SIDEBAR_NO_ICON_IN_LIST}>
                                       <a href="#" className={CLASS_NAMES.SIDEBAR_DISABLED_MENU_ITEM}>{item.name}</a>
                                    </li>;
@@ -72,7 +63,7 @@ class Sidebar extends React.Component {
                           <a href="#" className={CLASS_NAMES.SIDEBAR_ICON_SIZE}> <Icon icon='ruler.svg' />TAX Tailor</a>
                         </li> 
                         <ul>
-                          {TAXTailor.map(item => {
+                          {taxTailor.map(item => {
                             return <li>
                                       <a href="#" class={cx(CLASS_NAMES.SIDEBAR_ICON_SIZE , CLASS_NAMES.SIDEBAR_DISABLED_MENU_ITEM)}>
                                           <Icon icon={item.icon} />

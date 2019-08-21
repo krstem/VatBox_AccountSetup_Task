@@ -1,13 +1,24 @@
 .slider-container {
-    width: 558px;
     background-color: $white;
     height: 123px;
     margin-top: 10px;
     border-radius: 5px;
     padding: 10px;
     text-align: left;
+    min-width: 545px;
+    max-width: 558px;
+    display: flex;
+    overflow: hidden;
+
+    .sliding-element {
+        min-width: 558px;
+        max-width: 558px;
+    }
 
     .slider-header {
+        display: flex;
+        justify-content: space-between;
+
         .slider-title {
             font-weight: 500;
             font-size: 17px;
@@ -21,5 +32,28 @@
         opacity: 0.9;
         line-height: 1.5;
         letter-spacing: 0.4px;
+    }
+
+    .slider-icons-wrapper {
+        display: flex;
+
+        .slider-left-arrow {
+            transform: rotate(90deg);
+            padding: 0 20px;
+    
+            > img {
+                width: 10px;
+                cursor: pointer;
+            }
+        }
+    
+        .slider-right-arrow {
+            transform: rotate(270deg);
+    
+            > img {
+                width: 10px;
+                cursor: pointer;
+            }
+        }
     }
 }

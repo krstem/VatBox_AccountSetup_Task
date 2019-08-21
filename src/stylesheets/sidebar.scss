@@ -1,0 +1,141 @@
+.nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: $sidebarBackgroundColor;
+  position: fixed;
+  top: 0px;
+  width: 250px;
+  height: 100%;
+  color: $white;
+  text-align: left;
+
+  .sidebar-support-button {
+    position: relative;
+    top: 90px;
+    left: 50px;
+    height: 40px;
+    background-color: $sidebarBackgroundColor;
+    border: 1px solid $sidebarBorderColor;
+    border-radius: 4px;
+    
+    a {
+      text-decoration: none;
+    }
+    .sidebar-icon-size {
+      img {
+        width: 20px;
+        height: 20px;
+        padding-right: 8px;
+        position: relative;
+        top: 3px;
+      }
+    }
+    .sidebar-button-name {
+      font-size: 14px;
+      color: $white;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+}
+.nav-side-menu .sidebar-menu-logo {
+  background-color: $sidebarBackgroundColor;
+  line-height: 50px;
+  display: block;
+  padding-left: 15px;
+  border-bottom: 1px solid $sidebarBorderColor;
+  padding-top: 10px;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: $sidebarBackgroundColor;
+  // font-family: OpenSans;
+  font-size: 14px;
+  line-height: 2.53;
+  text-align: left;
+  color: $white;
+
+  .sidebar-icon-size {
+    img {
+      width: 20px;
+      height: 20px;
+      padding-right: 10px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .no-icon-in-list {
+    padding-left: 40px;
+  }
+
+  .sidebar-active-menu-item {
+    box-sizing: border-box;
+    width: 230px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: $sidebarActiveMenuItem;
+    border: 1px solid $sidebarActiveMenuItem;
+    box-sizing: border-box;
+    padding-left: 3px;
+  }
+}
+
+.nav-side-menu ul ,
+.nav-side-menu li  {
+  border: none;
+  line-height: 28px;
+  margin-left: 0px;
+}
+
+.sidebar-disabled-item {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.sidebar-disabled-item > a {
+  color: currentColor;
+  display: inline-block; 
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.nav-side-menu li {
+  padding-left: 10px;
+  border-bottom: 1px solid $sidebarBorderColor;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-menu-logo {
+    text-align: left;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}

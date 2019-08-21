@@ -1,0 +1,157 @@
+.react-grid-Container {
+    // @include absolute();
+    width: 100% !important;
+    height: 100%;
+
+    .react-grid-Main {
+        color: inherit;
+        outline: none;
+
+        .react-grid-Grid {
+            border: none;
+            border-radius: 2px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px 0 rgba(207, 207, 207, 0.59);
+            user-select: auto;
+
+            label.react-grid-checkbox-label {
+                outline: none;
+
+                &::before {
+                    outline: none;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 2px;
+                    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+                    border: 1px solid #686a7a;
+                }
+            }
+
+            .react-grid-HeaderRow {
+
+                .react-grid-checkbox-container {
+                    opacity: 0;
+                    text-align: center;
+                    input#select-all-checkbox, label.react-grid-checkbox-label {
+                        cursor: default;
+                    }
+                }
+
+                // .react-grid-checkbox-container-visible {
+                //     opacity: 1;
+                //     padding: 0px 10px;
+                //     height: 100%;
+                //     text-align: center;
+
+                //     label.react-grid-checkbox-label::before {
+                //         border-radius: 2px;
+                //         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+                //         background-color: #ffffff;
+                //         content: url('../assets/minus_sign.svg');
+                //         border: 1px solid #686a7a;
+                //     }
+                // }
+
+                .react-grid-HeaderCell {
+                    outline: none;
+                    border: none;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 2.89;
+                    letter-spacing: 0.4px;
+                    text-align: left;
+                    color: #101d3a;
+                    line-height: 31px;
+                    vertical-align: bottom;
+
+                    &.react-grid-HeaderCell--frozen:last-of-type {
+                        box-shadow: none !important;
+                    }
+                }
+            }
+
+            .react-grid-Viewport {
+                .react-grid-Canvas {
+                    .react-grid-Row {
+                        border-bottom: .5px solid blue;
+                        background:  #ffffff;
+                        box-shadow: none;
+
+                        .row-selected {
+                            background-color: #f9fafa;
+                        }
+
+                        label.react-grid-checkbox-label::before {
+                            opacity: 0;
+                        }
+
+                        .react-grid-checkbox:checked + label.react-grid-checkbox-label::before {
+                            opacity: 1;
+                        }
+
+                        &.grid-row-inactive {
+                            opacity: 0.35;
+                        }
+
+                        .react-grid-Cell {
+                            outline: none;
+                            font-family: Roboto;
+                            text-align: left;
+                            font-size: 14px;
+                            line-height: 2.62;
+                            color: #101d3a;
+                            border-right: none;
+                            border-bottom-width: 1px;
+                            border-bottom-color: rgba(233,233,234,0.25);
+
+                            .icon-size {
+                                width:22px;
+                                height: 14px;
+                            }
+
+                            &:focus {
+                                border: none;
+                            }
+
+                            &.react-grid-Cell--frozen.rdg-last--frozen {
+                                box-shadow: none !important;
+                                outline: none;
+                            }
+
+                        }
+
+                        &:hover {
+                            background-color: #f9fafa;
+
+                            label.react-grid-checkbox-label::before {
+                                opacity: 1;
+                            }
+
+                            .actions-cell, .supply-actions-cell{
+                                .actions-icons-wrapper {
+                                    .delete-action-wrapper, .edit-action-wrapper, .settings-action-wrapper {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:active {
+                            background-color: #f9fafa;
+                        }
+                    }
+                }
+            }
+
+            // .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
+            //     outline: none;
+            //     background-color: #7396ff;
+            //     border: none;
+            //     content: url('../assets/checkmark_checkbox.svg');
+            //     vertical-align: middle;
+            //     line-height: 18px;
+            // }
+        }
+    }
+}

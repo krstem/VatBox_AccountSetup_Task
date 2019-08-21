@@ -7,6 +7,7 @@ import Sidebar from '../Sidebar';
 
 import Header from '../Header';
 import AccountSetup from '../account-setup/AccountSetup';
+import EntityGrid from '../Grid/EntityGrid';
 
 const App = () => {
 
@@ -15,9 +16,10 @@ const App = () => {
   return (
     <div className="App">
       <LeadersContext.Provider value={{ data, dispatch }}>
-        <Sidebar />
+      <Sidebar />
         <Header />
-        <AccountSetup />
+          <AccountSetup />
+          <EntityGrid />
       </LeadersContext.Provider>
     </div>
   );

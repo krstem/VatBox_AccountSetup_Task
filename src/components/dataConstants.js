@@ -1,4 +1,3 @@
-'use strict';
 const vatRecovery = [
   { name: 'Your Reclaims' },
   { name: 'Your Invoices' },

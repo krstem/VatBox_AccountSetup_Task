@@ -18,7 +18,7 @@ const Modal = (props) => {
 
     const { dispatch } = useContext(LeadersContext);
 
-    let editedLeader = props.leader;
+    let editedLeader = { ...props.leader };
 
     const handleChange = (e, leader) => {
         e.preventDefault();

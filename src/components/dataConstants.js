@@ -5,12 +5,12 @@ const vatRecovery = [
   { name: 'Optimize Recovery' }
 ];
 const evidenceQualification = [
-  { name: 'Vendor Direct'}
+  { name: 'Vendor Direct' }
 ];
 const taxTailor = [
-  { icon:'molecule.svg', name: 'NMI' }, 
-  { icon:'checklist.svg', name: 'AP Audit' }, 
-  { icon:'line-chart.svg', name: 'T&E Spend Analysis' }
+  { icon: 'molecule.svg', name: 'NMI' },
+  { icon: 'checklist.svg', name: 'AP Audit' },
+  { icon: 'line-chart.svg', name: 'T&E Spend Analysis' }
 ];
 module.exports = {
   vatRecovery,

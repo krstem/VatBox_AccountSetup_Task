@@ -17,9 +17,18 @@ $sidebarActiveMenuItem: #2A4170;
 $grey: #707070;
 $bodyBackground: #EFF1F6;
 $actionBlue: #2ab8fc;
+$checkboxbackgroundColor: #eff1f6;
+$checkboxBorder: #d1d6e5;
+$gridHeaderCell: #101d3a;
+$gridBorderBottom: #e4e7f2;
+$selectedRow: #e2f6ff;
+$hierarchyCell: #707070;
+$checkedBackgroundColor: #22cbff;
 
 // Shadows
 
 $headerShadow: rgba(171,171,171,1);
 $modalBackgroundShadow: rgba(0, 0, 0, 0.3);
 $progressBarContainerShadow: rgba(37, 78, 210, 0.00);
+$gridShadow:  rgba(207, 207, 207, 0.59);
+$checkboxShadow:  rgba(0, 0, 0, 0.05);

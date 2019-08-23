@@ -1,8 +1,4 @@
 import React, { useReducer } from 'react';
-import './App.css';
-import { initialState } from '../../services/constants';
-import LeadersContext from '../../services/leadersContext';
-import accountSetupReducer from '../../services/accountSetupReducer';
 import './App.scss';
 import { initialState } from '../../services/constants';
 import LeadersContext from '../../services/leadersContext';
@@ -26,8 +22,8 @@ const App = () => {
           <Sidebar />
           <div className='right-section'>
             <AccountSetup />
-            <EntityGrid />
             <ProgressBarContainer />
+            <EntityGrid />
           </div>
         </div>
       </LeadersContext.Provider>

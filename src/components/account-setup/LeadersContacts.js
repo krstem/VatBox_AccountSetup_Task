@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Icon from '../Icon';
-import AccountSetupData from './accountSetupData';
+import AccountSetupData from './AccountSetupData';
 import Modal from '../Modal';
-import { initialState } from '../../services/constants';
 import { generatedId } from '../../services/utils';
 
 import cx from 'classnames';
@@ -20,7 +19,7 @@ const LeadersContacts = props => {
     const [modal, toggleModal] = useState(false);
     const { data } = useContext(LeadersContext);
 
-    const { title } = props;
+    const { title, actionTitle } = props;
 
     const obj = {
         id: generatedId(),
@@ -32,10 +31,12 @@ const LeadersContacts = props => {
         <div className={CLASS_NAMES.ACCOUNT_CARD_WRAPPER}>
             <h4 className={CLASS_NAMES.LEADERS_CARD_TITLE}>{title}</h4>
             {
-                data.map((leader, index) => {
+
+                data[props.type].map((leader, index) => {
                     return <AccountSetupData
                         key={index}
                         leader={leader}
+                        type={props.type}
                     />
                 })
             }
@@ -46,9 +47,10 @@ const LeadersContacts = props => {
                 <div className={CLASS_NAMES.ADD_CONTACT}>
                     <Icon icon='plus.svg' />
                 </div>
-                Add Leader
+                {actionTitle}
             </div>
             {modal && <Modal show={modal}
+                type={props.type}
                 onClose={() => toggleModal(!modal)}
                 leader={obj}
                 actionType='ADD'

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Icon from '../Icon';
-import AccountSetupData from './accountSetupData';
+import AccountSetupData from './AccountSetupData';
 import Modal from '../Modal';
 import { generatedId } from '../../services/utils';
 

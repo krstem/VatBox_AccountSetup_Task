@@ -14,7 +14,8 @@ function AccountSetup() {
         <div className={CLASS_NAMES.ACCOUNT_SETUP}>
             <Account />
             <div className={CLASS_NAMES.LEADERS_AND_CONTACTS}>
-                <LeadersContacts title={'Leaders'} />
+                <LeadersContacts title={'Leaders'} type={'leaders'} actionTitle={'Add Leader'} />
+                <LeadersContacts title={'VATBox Contacts'} type={'contacts'} actionTitle={'Add Contact'} />
             </div>
         </div>
     );

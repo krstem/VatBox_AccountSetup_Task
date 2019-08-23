@@ -1,0 +1,49 @@
+.progress-bar-main-container {
+    display: flex;
+    width: 96%;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    .progress-bar-container {
+        width: 300px;
+        background: $white;
+        height: 82px;
+        border-radius: 5px;
+        box-shadow: 0px 1px 2px 0 $progressBarContainerShadow;
+        border: solid 1px $progressBarBorder;
+        display: flex;
+        margin: 10px;
+    
+        .progress-bar-title {
+            font-weight: 500;
+            font-size: 17px;
+            display: flex;
+            opacity: 0.7;
+            padding-left: 15px;
+
+            @media (max-width: 1800px) {
+                font-size: 13px;
+            }
+        }
+    
+        .missing-progress-data {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            color: $grey;
+            opacity: 0.7;
+        }
+    
+        .progress-indicator {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+    
+            .progress-bar-wrapper {
+                border-radius: 5px;
+                width: 100px;
+                background-color: $lightGrey;
+            }
+        }
+    }
+}

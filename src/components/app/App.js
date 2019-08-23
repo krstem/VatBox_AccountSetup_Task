@@ -3,10 +3,15 @@ import './App.css';
 import { initialState } from '../../services/constants';
 import LeadersContext from '../../services/leadersContext';
 import accountSetupReducer from '../../services/accountSetupReducer';
-import Sidebar from '../Sidebar';
+import './App.scss';
+import { initialState } from '../../services/constants';
+import LeadersContext from '../../services/leadersContext';
+import accountSetupReducer from '../../services/accountSetupReducer';
 
 import Header from '../Header';
+import Sidebar from '../Sidebar';
 import AccountSetup from '../account-setup/AccountSetup';
+import ProgressBarContainer from '../progressBar/progressBarContainer';
 import EntityGrid from '../Grid/EntityGrid';
 
 const App = () => {
@@ -16,10 +21,15 @@ const App = () => {
   return (
     <div className="App">
       <LeadersContext.Provider value={{ data, dispatch }}>
-      <Sidebar />
         <Header />
-          <AccountSetup />
-          <EntityGrid />
+        <div className='content-wrapper'>
+          <Sidebar />
+          <div className='right-section'>
+            <AccountSetup />
+            <EntityGrid />
+            <ProgressBarContainer />
+          </div>
+        </div>
       </LeadersContext.Provider>
     </div>
   );

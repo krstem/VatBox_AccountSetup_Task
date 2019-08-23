@@ -20,7 +20,6 @@ function slideRight() {
     const secondElement = document.getElementsByClassName('sliding-element-2')[0];
     firstElement.style.left = `-558px`;
     secondElement.style.left = `0`;
-    console.log('right');
 }
 
 function slideLeft() {
@@ -28,7 +27,6 @@ function slideLeft() {
     const secondElement = document.getElementsByClassName('sliding-element-2')[0];
     secondElement.style.left = `-${558 * 2}px`;
     firstElement.style.left = `0`;
-    console.log('left');
 }
 
 const ActionSlider = (props) => {

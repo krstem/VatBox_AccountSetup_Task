@@ -5,19 +5,28 @@
     border-radius: 5px;
     padding: 10px;
     text-align: left;
-    min-width: 545px;
-    max-width: 558px;
+    min-width: 535px;
+    max-width: 570px;
     display: flex;
     overflow: hidden;
+    position: relative;
 
     .sliding-element {
-        min-width: 558px;
-        max-width: 558px;
+        min-width: 515px;
+        max-width: 530px;
+        position: absolute;
+        padding: 0 0 0 15px;
+        left: 0;
+
+        &:nth-child(2) {
+            left: 558px
+        }
     }
 
     .slider-header {
         display: flex;
         justify-content: space-between;
+        max-width: 550px;
 
         .slider-title {
             font-weight: 500;

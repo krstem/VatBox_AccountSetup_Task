@@ -27,7 +27,6 @@ const LeadersContacts = props => {
         phoneNumber: '',
         email: ''
     }
-
     return (
         <div className={CLASS_NAMES.ACCOUNT_CARD_WRAPPER}>
             <h4 className={CLASS_NAMES.LEADERS_CARD_TITLE}>{title}</h4>

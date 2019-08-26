@@ -8,6 +8,7 @@ import Header from '../Header';
 import Sidebar from '../Sidebar';
 import AccountSetup from '../account-setup/AccountSetup';
 import ProgressBarContainer from '../progressBar/progressBarContainer';
+import EntityGrid from '../Grid/EntityGrid';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <div className='right-section'>
             <AccountSetup />
             <ProgressBarContainer />
+            <EntityGrid />
           </div>
         </div>
       </LeadersContext.Provider>

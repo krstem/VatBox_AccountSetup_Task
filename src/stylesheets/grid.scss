@@ -81,7 +81,8 @@
                     width: 100%;
                     .react-grid-Canvas {
                         width: 100%;
-                        overflow: unset !important;
+                        overflow-x: hidden !important;
+                        overflow-y: scroll;
     
                         .rdg-selected {
                             /* border: 2px solid #66afe9; */

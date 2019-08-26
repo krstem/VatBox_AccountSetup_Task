@@ -78,6 +78,12 @@
                 width: 100%;
                 .react-grid-Canvas {
                     width: 100%;
+
+                    .rdg-selected {
+                        /* border: 2px solid #66afe9; */
+                        border: none !important;
+                    }
+
                     .react-grid-Row {
                         width: 100%;
                         border-bottom: 1px solid $gridBorderBottom;

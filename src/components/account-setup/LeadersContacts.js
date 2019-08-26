@@ -27,7 +27,6 @@ const LeadersContacts = props => {
         phoneNumber: '',
         email: ''
     }
-
     return (
         <div className={CLASS_NAMES.ACCOUNT_CARD_WRAPPER}>
             <h4 className={CLASS_NAMES.LEADERS_CARD_TITLE}>{title}</h4>
@@ -55,6 +54,7 @@ const LeadersContacts = props => {
                 onClose={() => toggleModal(!modal)}
                 leader={obj}
                 actionType='ADD'
+                title={`Add ${props.type}`}
             />}
         </div>
     );

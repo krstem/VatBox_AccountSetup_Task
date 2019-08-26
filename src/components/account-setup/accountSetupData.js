@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import cx from 'classnames';
 
+import LeadersContext from '../../services/leadersContext'
 import Icon from '../Icon';
 import Modal from '../Modal';
 
@@ -17,7 +18,22 @@ const CLASS_NAMES = {
 
 const AccountSetupData = (props) => {
     const [modal, toggleModal] = useState(false);
+    const { dispatch } = useContext(LeadersContext);
     const { name, phoneNumber, email } = props.leader;
+
+    const handleDeleteClick = () => {
+        const dispatchObj = {
+            type: 'DELETE',
+            payload: props.leader
+        }
+
+        if (props.type === 'leaders') {
+            dispatchObj.payload['type'] = 'leaders';
+        } else {
+            dispatchObj.payload['type'] = 'contacts';
+        }
+        dispatch(dispatchObj);
+    }
     return (
         <div className={CLASS_NAMES.LEADERS}>
             <div className={CLASS_NAMES.LEGEND}>
@@ -26,7 +42,9 @@ const AccountSetupData = (props) => {
                     <div className={CLASS_NAMES.EDIT} onClick={() => toggleModal(!modal)}>
                         <Icon icon='edit.svg' />
                     </div>
-                    <div className={CLASS_NAMES.DELETE}>
+                    <div className={CLASS_NAMES.DELETE}
+                        onClick={handleDeleteClick}
+                    >
                         <Icon icon='delete.svg' />
                     </div>
                 </div>
@@ -35,6 +53,7 @@ const AccountSetupData = (props) => {
                     leader={props.leader}
                     type={props.type}
                     actionType='EDIT'
+                    title={`Edit ${props.type}`}
                 />}
             </div>
             <p className={CLASS_NAMES.DATA}>{phoneNumber}</p>

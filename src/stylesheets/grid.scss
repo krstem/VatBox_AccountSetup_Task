@@ -1,198 +1,210 @@
-.react-grid-Container {
-    width: 96% !important;
+.table {
+    width: 95%;
     margin: 0 auto;
-    padding-top: 30px !important;
 
-    .react-grid-Main {
-        color: inherit;
-        outline: none;
+    .react-grid-Container {
+        margin: 0 auto;
+        padding-top: 30px !important;
 
-        .react-grid-Grid {
-            border: none;
-            border-radius: 2px;
-            background-color: $white;
-            box-shadow: 0 2px 5px 0 $gridShadow;
-            user-select: auto;
-
-            .react-grid-checkbox-label {
-                outline: none;
-
-                &::before {
-                    outline: none;
-                    width: 17px;
-                    height: 17px;
-                    border-radius: 3px;
-                    background-color: $checkboxbackgroundColor;
-                    border: 1px solid $checkboxBorder;
-                }
-            }
-
-            .react-grid-Header {
+    
+        .react-grid-Main {
+            color: inherit;
+            outline: none;
+    
+            .react-grid-Grid {
+                border: none;
+                border-radius: 2px;
                 background-color: $white;
-
-                .react-grid-HeaderRow {
-                    widows: 100%;
-                    .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
-                        border-radius: 2px;
-                        box-shadow: 0 2px 3px 0 $checkboxShadow;
-                        background-color: $white;
-                        content: url('../assets/images/minus_sign.svg');
+                box-shadow: 0 2px 5px 0 $gridShadow;
+                user-select: auto;
+    
+                .react-grid-checkbox-label {
+                    outline: none;
+    
+                    &::before {
+                        outline: none;
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 3px;
+                        background-color: $checkboxbackgroundColor;
                         border: 1px solid $checkboxBorder;
                     }
-
-
-                        .react-grid-HeaderCell {
-                            width:10%;
-                            outline: none;
-                            border: none;
-                            font-family: Roboto;
-                            font-size: 14px;
-                            font-weight: 600;
-                            line-height: 2.89;
-                            letter-spacing: 0.4px;
-                            text-align: left;
-                            color: $gridHeaderCell;
-                            background-color: $white;
-
-                            .react-grid-checkbox-label {
-                                top: 49%;
-                            }
-
-                            &.erp-cell {
-                                position: absolute; 
-                                left: 70px !important;
-                            }
-
-                            &.focal-points-cell,
-                            &.activation-data-cell,
-                            &.payment-setup-cell,
-                            &.reclaim-data-cell {
-                                text-align: center;
-                            }
-        
-                            &.react-grid-HeaderCell--frozen:last-of-type {
-                                box-shadow: none !important;
-                            }
-                        }
-
                 }
-            }
-
-            .react-grid-Viewport {
-                width: 100%;
-                .react-grid-Canvas {
-                    width: 100%;
-
-                    .rdg-selected {
-                        /* border: 2px solid #66afe9; */
-                        border: none !important;
-                    }
-
-                    .react-grid-Row {
-                        width: 100%;
-                        border-bottom: 1px solid $gridBorderBottom;
-                        background:  $white;
-                        box-shadow: none;
-
-                        .row-selected {
-                            background-color: $selectedRow;
+    
+                .react-grid-Header {
+                    background-color: $white;
+    
+                    .react-grid-HeaderRow {
+                        widows: 100%;
+                        width: 100% !important;
+                        overflow: hidden !important;
+                        .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
+                            border-radius: 2px;
+                            box-shadow: 0 2px 3px 0 $checkboxShadow;
+                            background-color: $white;
+                            content: url('../assets/images/minus_sign.svg');
+                            border: 1px solid $checkboxBorder;
                         }
-
-
-                        &.grid-row-inactive {
-                            opacity: 0.35;
-                        }
-
-                        .react-grid-Cell {
-                            outline: none;
-                            width: 10%;
-                            font-family: Roboto;
-                            text-align: left;
-                            font-size: 14px;
-                            line-height: 2.62;
-                            color: $gridHeaderCell;
-                            border-right: none;
-                            border-bottom-width: 1px;
-                            border-bottom-color: $gridBorderBottom;
-
-                             &.erp-cell {
-                                position: absolute; 
-                                left: 70px !important;
+    
+                            .react-grid-HeaderCell {
+                                width:10%;
+                                outline: none;
+                                border: none;
+                                font-family: Roboto;
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 2.89;
+                                letter-spacing: 0.4px;
+                                text-align: left;
+                                color: $gridHeaderCell;
+                                background-color: $white;
+    
+                                &.erp-cell {
+                                    position: absolute; 
+                                    left: 70px !important;
+                                }
+    
+                                &.focal-points-cell,
+                                &.activation-data-cell,
+                                &.payment-setup-cell,
+                                &.reclaim-data-cell {
+                                    text-align: center;
+                                }
+            
+                                &.react-grid-HeaderCell--frozen:last-of-type {
+                                    box-shadow: none !important;
+                                }
                             }
+    
+                    }
+                }
+    
+                .react-grid-Viewport {
+                    width: 100% !important;
+                    .react-grid-Canvas {
+                        width: 100% !important;
+                        overflow: unset !important;
 
-                            &.activation-data-cell,
-                            &.payment-setup-cell,
-                            &.reclaim-data-cell{
-                                .progress-indicator {
-                                    display: flex;
-                                    align-items: center;
-                                    padding: 0 15px;
-                            
-                                    .progress-bar-wrapper {
-                                        border-radius: 5px;
-                                        width: 100px;
-                                        background-color: $lightGrey;
+                        .react-grid-Canvas::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                
+                        .react-grid-Canvas::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            background-color: grey;
+                        }
+    
+                        .rdg-selected {
+                            /* border: 2px solid #66afe9; */
+                            border: none !important;
+                        }
+    
+                        .react-grid-Row {
+                            width: 100% !important;
+                            border-bottom: 1px solid $gridBorderBottom;
+                            background:  $white;
+                            box-shadow: none;
+    
+                            .row-selected {
+                                background-color: $selectedRow;
+                            }
+    
+    
+                            &.grid-row-inactive {
+                                opacity: 0.35;
+                            }
+    
+                            .react-grid-Cell {
+                                outline: none;
+                                width: 10%;
+                                font-family: Roboto;
+                                text-align: left;
+                                font-size: 14px;
+                                line-height: 2.62;
+                                color: $gridHeaderCell;
+                                border-right: none;
+                                border-bottom-width: 1px;
+                                border-bottom-color: $gridBorderBottom;
+    
+                                 &.erp-cell {
+                                    position: absolute; 
+                                    left: 70px !important;
+                                }
+
+                                &.activation-data-cell,
+                                &.payment-setup-cell,
+                                &.reclaim-data-cell{
+                                    .progress-indicator {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 15px;
+                                
+                                        .progress-bar-wrapper {
+                                            border-radius: 5px;
+                                            width: 100px;
+                                            background-color: $lightGrey;
+                                        }
                                     }
                                 }
-                            }
-
-                            &.focal-points-cell,
-                            &.activation-data-cell,
-                            &.payment-setup-cell,
-                            &.reclaim-data-cell {
-                                text-align: center;
-                            }
-
-
-                            .hierarchy-cell {
-                                width: 8px;
-                                height: 8px;
-                                border-radius: 50%;
-                                border: 1px solid $hierarchyCell;
-                                background-color: $white;
-                                display: inline-block;
-                                margin-right: 1px;
-                            }
-
-                            
-                            .icon-size {
-                                // text-align: center;
-                                img {
-                                    width:22px;
-                                    height: 14px;
+    
+                                &.focal-points-cell,
+                                &.activation-data-cell,
+                                &.payment-setup-cell,
+                                &.reclaim-data-cell {
+                                    text-align: center;
                                 }
+    
+    
+                                .hierarchy-cell {
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%;
+                                    border: 1px solid $hierarchyCell;
+                                    background-color: $white;
+                                    display: inline-block;
+                                    margin-right: 1px;
+                                }
+    
+                                
+                                .icon-size {
+                                    // text-align: center;
+                                    img {
+                                        width:22px;
+                                        height: 14px;
+                                    }
+                                }
+    
+                                &:focus {
+                                    border: none;
+                                }
+    
+                                &.react-grid-Cell--frozen.rdg-last--frozen {
+                                    box-shadow: none !important;
+                                    outline: none;
+                                }
+    
                             }
-
-                            &:focus {
-                                border: none;
+    
+                            &:hover {
+                                background-color: $selectedRow;
                             }
-
-                            &.react-grid-Cell--frozen.rdg-last--frozen {
-                                box-shadow: none !important;
-                                outline: none;
+    
+                            &:active {
+                                background-color: $selectedRow;
                             }
-
-                        }
-
-                        &:hover {
-                            background-color: $selectedRow;
-                        }
-
-                        &:active {
-                            background-color: $selectedRow;
                         }
                     }
                 }
-            }
-
-            .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
-                outline: none;
-                background-color: $checkedBackgroundColor;
-                border: none;
-                box-shadow: none;
-                content: url('../assets/images/checkmark_checkbox.svg');
-                vertical-align: middle;
-                line-height: 18px;
+    
+                .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
+                    outline: none;
+                    background-color: $checkedBackgroundColor;
+                    border: none;
+                    box-shadow: none;
+                    content: url('../assets/images/checkmark_checkbox.svg');
+                    vertical-align: middle;
+                    line-height: 18px;
+                }
             }
         }
     }

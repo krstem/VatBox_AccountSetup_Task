@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import ReactDataGrid from 'react-data-grid';
-import Icon from '../Icon';
 import entityGridSchema from './entityGridSchema'
 import { rowGetter, tableData } from './TableData';
-import { AutoSizer } from 'react-virtualized';
 
 const CLASS_NAMES = {
-    REACT_GRID_CHECKBOX_CONTAINER: 'react-grid-checkbox-container',
-    REACT_GRID_CHECKBOX_CONTAINER_VISIBLE: 'react-grid-checkbox-container-visible',
+    TABLE: 'table',
 };
 function EntityGrid() {
 
@@ -25,21 +22,23 @@ function EntityGrid() {
         setSelectedGroupIds(selected);
     };
 
-    return (<ReactDataGrid columns={entityGridSchema}
-        rowGetter={rowGetter}
-        rowsCount={tableData.length}
-        rowHeight={40}
-        headerRowHeight={41}
-        minHeight={500}
-        rowSelection={{
-            showCheckbox: true,
-            onRowsSelected: onRowsSelected,
-            onRowsDeselected: onRowsDeselected,
-            selectBy: {
-                keys: { rowKey: 'id', values: selectedGroupIds }
-            }
-        }}
-    />);
+    return (<div className={CLASS_NAMES.TABLE}>
+        <ReactDataGrid columns={entityGridSchema}
+            rowGetter={rowGetter}
+            rowsCount={tableData.length}
+            rowHeight={40}
+            headerRowHeight={41}
+            minHeight={500}
+            rowSelection={{
+                showCheckbox: true,
+                onRowsSelected: onRowsSelected,
+                onRowsDeselected: onRowsDeselected,
+                selectBy: {
+                    keys: { rowKey: 'id', values: selectedGroupIds }
+                }
+            }}
+        />
+    </div>);
 }
 
 export default EntityGrid;

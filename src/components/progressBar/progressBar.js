@@ -12,13 +12,7 @@ const CLASS_NAMES = {
 
 const ProgressBar = (props) => {
 
-    const { title, percent, height } = props;
-    let progressBarStyle = {
-        backgroundColor: '#2AB8FC',
-        width: `${percent}%`,
-        height: `${height}`,
-        borderRadius: `5px`
-    };
+    const { title, percent, height, color } = props;
 
     return (
         <div className={CLASS_NAMES.PROGRESS_BAR_CONTAINER}>
@@ -26,7 +20,7 @@ const ProgressBar = (props) => {
                 <h1 className={CLASS_NAMES.PROGRESS_BAR_TITLE}>{title}</h1>
                 <div className={CLASS_NAMES.MISSING_PROGRESS_DATA}>{100 - percent}% Missing</div>
             </div>
-            <ProgressBarIndicator style={progressBarStyle} />
+            <ProgressBarIndicator percent={percent} height={height} color={color} />
         </div>
     );
 }

@@ -8,6 +8,7 @@ import Header from '../Header';
 import Sidebar from '../Sidebar';
 import AccountSetup from '../account-setup/AccountSetup';
 import ProgressBarContainer from '../progressBar/progressBarContainer';
+import SearchContainer from '../Grid/SearchContainer';
 import EntityGrid from '../Grid/EntityGrid';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <div className='right-section'>
             <AccountSetup />
             <ProgressBarContainer />
+            <SearchContainer />
             <EntityGrid />
           </div>
         </div>

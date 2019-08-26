@@ -5,6 +5,7 @@
     .react-grid-Container {
         margin: 0 auto;
         padding-top: 30px !important;
+
     
         .react-grid-Main {
             color: inherit;
@@ -35,6 +36,7 @@
     
                     .react-grid-HeaderRow {
                         widows: 100%;
+                        width: 100% !important;
                         overflow: hidden !important;
                         .react-grid-checkbox:checked + .react-grid-checkbox-label:before {
                             border-radius: 2px;
@@ -78,11 +80,20 @@
                 }
     
                 .react-grid-Viewport {
-                    width: 100%;
+                    width: 100% !important;
                     .react-grid-Canvas {
                         width: 100%;
                         overflow-x: hidden !important;
                         overflow-y: scroll;
+
+                        .react-grid-Canvas::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                
+                        .react-grid-Canvas::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            background-color: grey;
+                        }
     
                         .rdg-selected {
                             /* border: 2px solid #66afe9; */
@@ -90,7 +101,7 @@
                         }
     
                         .react-grid-Row {
-                            width: 100%;
+                            width: 100% !important;
                             border-bottom: 1px solid $gridBorderBottom;
                             background:  $white;
                             box-shadow: none;
@@ -119,6 +130,22 @@
                                  &.erp-cell {
                                     position: absolute; 
                                     left: 70px !important;
+                                }
+
+                                &.activation-data-cell,
+                                &.payment-setup-cell,
+                                &.reclaim-data-cell{
+                                    .progress-indicator {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 15px;
+                                
+                                        .progress-bar-wrapper {
+                                            border-radius: 5px;
+                                            width: 100px;
+                                            background-color: $lightGrey;
+                                        }
+                                    }
                                 }
     
                                 &.focal-points-cell,

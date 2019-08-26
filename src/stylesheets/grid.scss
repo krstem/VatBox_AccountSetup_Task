@@ -54,6 +54,10 @@
                             color: $gridHeaderCell;
                             background-color: $white;
 
+                            .react-grid-checkbox-label {
+                                top: 49%;
+                            }
+
                             &.erp-cell {
                                 position: absolute; 
                                 left: 70px !important;
@@ -114,6 +118,22 @@
                              &.erp-cell {
                                 position: absolute; 
                                 left: 70px !important;
+                            }
+
+                            &.activation-data-cell,
+                            &.payment-setup-cell,
+                            &.reclaim-data-cell{
+                                .progress-indicator {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 15px;
+                            
+                                    .progress-bar-wrapper {
+                                        border-radius: 5px;
+                                        width: 100px;
+                                        background-color: $lightGrey;
+                                    }
+                                }
                             }
 
                             &.focal-points-cell,

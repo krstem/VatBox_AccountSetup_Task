@@ -20,7 +20,7 @@ export default [
     {
         name: 'ERP',
         key: "erp",
-        // width: 170,
+        width: 170,
         cellClass: CLASS_NAMES.ERP_CELL,
     },
     {
@@ -28,46 +28,46 @@ export default [
         key: "hierarchy",
         formatter: HierarchyFormatter,
         cellClass: CLASS_NAMES.HIERARCHY_CELL,
-        // width: 150,
+        width: 150,
     },
     {
         name: 'Legal Name' ,
         key: "legalName",
         cellClass: CLASS_NAMES.LEGAL_NAME_CELL,
-        // width: 230,
+        width: 230,
     },
     {
         name: 'Country',
         key: "country",
-        // width: 160,
+        width: 160,
         cellClass: CLASS_NAMES.COUNTRY_CELL,
     },
     {
         name: 'Focal Points',
         key: "focalPoints",
         cellClass: CLASS_NAMES.FOCAL_POINTS,
-        // width: 160,
+        width: 160,
         formatter: FocalPointsFormatter,
     },
     {
         name: 'Activation Data',
         key: "activationData",
         cellClass: CLASS_NAMES.ACTIVATION_DATA,
-        // width: 160,
+        width: 160,
         formatter: ActivationDataFormatter
     },
     {
         name: 'Payment Setup',
         key: "paymentSetup",
         cellClass: CLASS_NAMES.PAYMENT_SETUP,
-        // width: 160,
+        width: 160,
         formatter: PaymentSetupFormatter
     },
     {
         name: 'Reclaim Data',
         key: "reclaimData",
         cellClass: CLASS_NAMES.RECLAIM_DATA,
-        // s
+        width: 160,
         formatter: ReclaimDataFormatter
     }
 ];

@@ -6,6 +6,7 @@
 // Variables
 
 $white: #FFFFFF;
+$black: #000000;
 $grey: #707070;
 $bodyBackground: #EFF1F6;
 $actionBlue: #2ab8fc;
@@ -24,6 +25,8 @@ $gridBorderBottom: #e4e7f2;
 $selectedRow: #e2f6ff;
 $hierarchyCell: #707070;
 $checkedBackgroundColor: #22cbff;
+$modalBackgroundColor: #f9f9f9;
+$inputBorder: #D3D3D3;
 
 // Shadows
 
@@ -32,3 +35,4 @@ $modalBackgroundShadow: rgba(0, 0, 0, 0.3);
 $progressBarContainerShadow: rgba(37, 78, 210, 0.00);
 $gridShadow:  rgba(207, 207, 207, 0.59);
 $checkboxShadow:  rgba(0, 0, 0, 0.05);
+$modalBoxShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

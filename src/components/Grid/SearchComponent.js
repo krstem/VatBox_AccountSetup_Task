@@ -1,47 +1,56 @@
 import React, { useState }from 'react';
 import {tableData} from './TableData';
+import Icon from '../Icon';
 
-
-const CLASS_NAMES = {
-    SEARCH_MAIN_CONTAINER: 'search-main-container'
-}
 
 const SearchComponent = (props) => {
+    const [groupList, setGroupList] = useState(tableData);
+    let [filteredGroupNameOrId, setfilteredGroupNameOrId] = useState([]);
+    let currentGroups = [];
 
-const [groupList, setGroupList] = useState(tableData);
-const [filteredGroupNameOrId, setfilteredGroupNameOrId] = useState([]);
-
-    const handleChange = (e) => {
-        let currentGroups = [];
+    const handleChange = (e, name) => {
+        const filter = e.target.value.toLowerCase();
+        let lowercase;
         e.preventDefault();
-        console.log("value", e.target.value)
-        // let filteredGroups = [];
-
         if (e.target.value !== '') {
             currentGroups = groupList;
-            filteredGroupNameOrId = currentGroups.filter(name => {
-                const lowercase = name.toLowerCase();
-                const filter = e.target.value.toLowerCase();
+            filteredGroupNameOrId = currentGroups.filter(item => {
+                if (name === 'erp') {
+                    lowercase = item.erp.toLowerCase();
+                    console.log("ERP", lowercase)
+                } else if(name === 'legalName') {
+                    lowercase = item.legalName.toLowerCase();
+                    console.log('LEGAL NAME', lowercase)
+                } else {
+                    lowercase = item.country.toLowerCase();
+                    console.log("country", lowercase)
+                } 
+                    
 
                 return lowercase.includes(filter);
             });
         } else {
-            filteredGroupNameOrId = this.StaticRange.groupList;
+            filteredGroupNameOrId = groupList;
         }
 
         setfilteredGroupNameOrId([...filteredGroupNameOrId]);
 
-        // this.setState ({
-        //     filteredGroupNameOrId: filteredGroups;
-        // })
     };
+    console.log("NEWlIST", filteredGroupNameOrId)
     return (
-       <div>
-           <input id='erp'
-                  type='text'
-                  placeholder="All"
-                  onChange={(e) => handleChange(e)}></input>
-       </div>
+        <div className="search-wrapper">
+            <div>
+                <div className="input-label">{props.title}</div>
+                {/* <span className="input-icon-erp"><Icon icon='search_icon.svg' /></span> */}
+                <input id={props.name}
+                    type='search'
+                    placeholder="All"
+                    className="inputStyle"
+                    onChange={(e) => handleChange(e, props.name)}>
+                </input>
+            </div>
+        </div>  
+
     );
 }
 

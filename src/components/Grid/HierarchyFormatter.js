@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 const HierarchyFormatter = ({row}) => {
 
     var output = [];
+    // output = row.hierarchy.map(function (){
+    //     return <div className="hierarchy-cell"></div>;
+    // })
 
     let i;
     for (i = 0; i < row.hierarchy; i++) {

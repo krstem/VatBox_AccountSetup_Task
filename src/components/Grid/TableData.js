@@ -8,7 +8,7 @@ const tableData = [
   { id: 5, erp: '1b2345' , hierarchy:1, legalName: 'AMCO Industrial Park UK', country: 'Austria', focalPoints: 0, activationData: 80, paymentSetup: 10, reclaimData: 100},
   { id: 6, erp: '567687' , hierarchy:2, legalName: 'AMCO Distribution AG', country: 'Germany', focalPoints: 1, activationData: 100, paymentSetup: 40, reclaimData: 100},
   { id: 7, erp: '12345' , hierarchy:0, legalName: 'AMCO Distribution AG', country: 'Germany', focalPoints: 1, activationData: 100, paymentSetup: 40, reclaimData: 100},
-  { id: 8, erp: '12dd345' , hierarchy:1, legalName: 'AMCO Distribution AG', country: 'United Kingdom', focalPoints: 1, activationData: '', paymentSetup: 40, reclaimData: 100},
+  { id: 8, erp: '12dd345' , hierarchy:1, legalName: 'AMCO Distribution AG', country: 'United Kingdom', focalPoints: 1, activationData: 100, paymentSetup: 40, reclaimData: 100},
   { id: 9, erp: '12345' , hierarchy:0, legalName: 'AMCO Industrial Park UK', country: 'France', focalPoints: 0, activationData: 100, paymentSetup: 40, reclaimData: 100},
   { id: 10, erp: '1234w5' , hierarchy:1, legalName: 'AMCO Distribution AG', country: 'United Kingdom', focalPoints: 1, activationData: 100, paymentSetup: 80, reclaimData: 50},
   { id: 11, erp: '1234c5' , hierarchy:0, legalName: 'AMCO Industrial Park UK', country: 'Austria', focalPoints: 0, activationData: 50, paymentSetup: 80, reclaimData: 100},
@@ -39,7 +39,13 @@ const tableData = [
 
 const rowGetter = rowNumber => tableData[rowNumber];
 
+const progressBar = {
+  completed: 100,
+  danger: 50,
+}
+
 module.exports = {
     tableData,
-    rowGetter
+    rowGetter,
+    progressBar
   };

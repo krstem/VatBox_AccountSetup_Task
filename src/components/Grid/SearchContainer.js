@@ -10,8 +10,10 @@ const SearchContainer = (props) => {
 
     return (
         <div className={CLASS_NAMES.SEARCH_MAIN_CONTAINER}>
-            {/* <div>Entity</div> */}
-            {/* <SearchComponent /> */}
+            {/* <span>Entity</span> */}
+            {/* <SearchComponent title={'ERP #'} name={'erp'}/>
+            <SearchComponent title={'Entity Name'} name={'legalName'}/>
+            <SearchComponent title={'Country'} name={'country'}/> */}
         </div>
     );
 }

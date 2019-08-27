@@ -1,10 +1,46 @@
 .search-main-container {
     display: flex;
-    width: 96%;
-    margin: 0 auto;
-    padding-top: 30px; 
-    display: flex;
-    width: 96%;
+    width: 95%;
     margin: 0 auto;
     padding-top: 30px;
+
+    .search-wrapper {
+        text-align: left;
+        display: flex;
+
+        .input-label {
+            margin-bottom: 8px;
+            color: gray;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .input-icon-erp {
+            position: absolute;
+            margin: auto;
+            left: 26%;
+            bottom: 38%;
+        }
+        .input-icon-legal-name {
+            position: absolute;
+            margin: auto;
+            left: 39%;
+            bottom: 38%;
+        }
+
+        .input-icon-country {
+            position: absolute;
+            margin: auto;
+            left: 52%;
+            bottom: 38%;
+        }
+
+        .inputStyle {
+            margin-right: 15px;
+            border: 1px solid rgb(231, 227, 227);
+            border-radius: 3px;
+            height: 50%;
+        }
+    }
+
 }

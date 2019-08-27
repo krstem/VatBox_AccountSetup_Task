@@ -24,7 +24,7 @@ const App = () => {
           <div className='right-section'>
             <AccountSetup />
             <ProgressBarContainer />
-            <SearchContainer />
+            {/* <SearchContainer /> */}
             <EntityGrid />
           </div>
         </div>
